@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GRid : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private bool isMoving;
     private Vector3 originPos, targetPos;
