@@ -4,28 +4,14 @@ using UnityEngine;
 
 public class Connect : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        this.transform.parent = coll.gameObject.transform;
-        Debug.Log("Czemu to nie dziala?");
+        Debug.Log("We Smashing");
+        if (coll.gameObject.tag == "Player")
+        {
+            this.transform.parent.parent = coll.gameObject.transform.parent;
+            this.transform.gameObject.tag = "Player";
+        }
     }
-
-    //void OnTriggerEnter2D(Collider2D coll)
-    //{
-    //    this.transform.parent = coll.gameObject.transform;
-    //    Debug.Log("Czemu to nie dziala?");
-    //}
 }
