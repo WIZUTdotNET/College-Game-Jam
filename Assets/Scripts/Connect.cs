@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Connect : MonoBehaviour
 {
+<<<<<<< HEAD
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
@@ -14,3 +15,16 @@ public class Connect : MonoBehaviour
         }
     }
 }
+=======
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Debug.Log("We Smashing");
+        if (coll.gameObject.tag == "Player")
+        {
+            this.transform.parent.parent = coll.gameObject.transform.parent;
+            this.transform.gameObject.tag = "Player";
+        }
+    }
+}
+>>>>>>> main
