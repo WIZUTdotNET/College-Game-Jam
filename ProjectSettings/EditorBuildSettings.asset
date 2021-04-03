@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/albert_scene.unity
+    guid: d021faf42c88e374b9d14c39cf17c9d8
   m_configObjects: {}
