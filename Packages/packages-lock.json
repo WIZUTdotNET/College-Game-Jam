@@ -256,9 +256,9 @@
       }
     },
     "com.unity.modules.tilemap": {
-      "version": "1.0.0",
+      "version": "file:C:/Program Files/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap",
       "depth": 0,
-      "source": "builtin",
+      "source": "local",
       "dependencies": {
         "com.unity.modules.physics2d": "1.0.0"
       }
