@@ -30,7 +30,7 @@
     "com.unity.modules.terrain": "1.0.0",
     "com.unity.modules.terrainphysics": "1.0.0",
     "com.unity.modules.tilemap": "file:C:/Program Files/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap",
-    "com.unity.modules.ui": "1.0.0",
+    "com.unity.modules.ui": "file:C:/Program Files/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui",
     "com.unity.modules.uielements": "1.0.0",
     "com.unity.modules.umbra": "1.0.0",
     "com.unity.modules.unityanalytics": "1.0.0",

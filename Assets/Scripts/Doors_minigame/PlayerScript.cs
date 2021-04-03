@@ -1,13 +1,15 @@
-﻿using System.Threading;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    public Sprite[] _playerSprites;
+    public Sprite[] playerSprites;
     private SpriteRenderer _playerSpriteRenderer;
     private Sprite _newSprite;
     private Rigidbody2D _rigidbody2D;
+    private TextMeshProUGUI _scoreText;
+    private TextMeshProUGUI _scoreTextOnPlayer;
     private string _playerColor;
     private int _score;
     private int _spriteID;
@@ -17,6 +19,8 @@ public class PlayerScript : MonoBehaviour
     {
         _rigidbody2D = transform.GetComponent<Rigidbody2D>();
         _playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        _scoreText = GameObject.Find("Canvas/ScorePanel/Score").GetComponent<TextMeshProUGUI>();
+        _scoreTextOnPlayer = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         _oldSpriteID = -1;
         ChangeColor();
     }
@@ -48,12 +52,11 @@ public class PlayerScript : MonoBehaviour
             if (_score % 5 == 0)
                 Connect();
     }
-    
 
     private void ChangeColor()
     {
-        while ((_spriteID = Random.Range(0, _playerSprites.Length)) == _oldSpriteID) ;
-        _newSprite = _playerSprites[_spriteID];
+        while ((_spriteID = Random.Range(0, playerSprites.Length)) == _oldSpriteID) ;
+        _newSprite = playerSprites[_spriteID];
         _playerSpriteRenderer.sprite = _newSprite;
         _oldSpriteID = _spriteID;
 
@@ -66,6 +69,8 @@ public class PlayerScript : MonoBehaviour
         if (doorColor == _playerColor)
         {
             _score++;
+            _scoreText.text = _score.ToString();
+            _scoreTextOnPlayer.text = _score.ToString();
         }
         else
         {

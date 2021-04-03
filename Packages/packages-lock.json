@@ -264,9 +264,9 @@
       }
     },
     "com.unity.modules.ui": {
-      "version": "1.0.0",
+      "version": "file:C:/Program Files/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui",
       "depth": 0,
-      "source": "builtin",
+      "source": "local",
       "dependencies": {}
     },
     "com.unity.modules.uielements": {
